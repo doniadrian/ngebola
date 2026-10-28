@@ -1,15 +1,16 @@
 # Rencana implementasi Ngebola
 
-Acuan: [PRD.md](../PRD.md) (fungsi), [DESIGN.md](../DESIGN.md) + `referensi/` (tampilan), [CLAUDE.md](../CLAUDE.md) (aturan tetap).
+Acuan: [PRD.md](PRD.md) (fungsi), [DESIGN.md](DESIGN.md) + `referensi/` (tampilan), [CLAUDE.md](../CLAUDE.md) (aturan tetap).
 Keputusan yang masih menunggu jawaban ditandai **[?]** dan dirangkum di bagian 6.
 
 ## 1. Struktur folder
 
 ```
 ngebola-app/
-├─ CLAUDE.md  PRD.md  DESIGN.md  CODEBASE.md  STATUS.md  DATABASE.md  DEVELOPMENT.md
-├─ docs/PLAN.md
-├─ assets/  referensi/                 # sumber asli, tidak diubah
+├─ CLAUDE.md  AGENTS.md  README.md
+├─ docs/                               # PRD, DESIGN, PLAN, CODEBASE, STATUS, DATABASE, DEVELOPMENT
+│  └─ referensi/                       # gambar acuan visual (HTML), tidak diubah
+├─ assets/                             # sumber asli logo & maskot, tidak diubah
 ├─ public/
 │  ├─ brand/                           # salinan logo & maskot dari assets/ (apa adanya)
 │  ├─ demo/lambang/                    # lambang club fiksi untuk seed

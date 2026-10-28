@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils"
 import { Slot } from "radix-ui"
 import { SpinnerGapIcon } from "@phosphor-icons/react/ssr"
 
-// referensi/Anatomi.html, Matriks.html, Gelap.html. Tepi 2px, bayangan keras tanpa blur,
+// docs/referensi/Anatomi.html, Matriks.html, Gelap.html. Tepi 2px, bayangan keras tanpa blur,
 // hover naik 1px (bayangan +1), ditekan turun 4px (bayangan hilang), nonaktif krem abu.
 const buttonVariants = cva(
   "group/button relative inline-flex shrink-0 items-center justify-center border-2 font-bold whitespace-nowrap select-none outline-none [transition-property:translate,box-shadow,background-color,border-color,color] [transition-timing-function:var(--ease-pegas),var(--ease-pegas),ease-out,ease-out,ease-out] duration-[240ms] tekan:duration-60 tekan:[transition-timing-function:ease-out] [&_svg]:transition-[scale] [&_svg]:duration-150 not-disabled:tekan:[&_svg]:scale-90 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-hijau disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:shrink-0",

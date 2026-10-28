@@ -1,8 +1,8 @@
 # Ngebola — aturan tetap proyek
 
 Web app sparring antar club fun football, fokus awal Pekanbaru.
-Sumber kebenaran: [PRD.md](PRD.md) untuk fungsi, [DESIGN.md](DESIGN.md) + [referensi/](referensi/) untuk tampilan.
-Rencana kerja: [docs/PLAN.md](docs/PLAN.md). Status aktual: [STATUS.md](STATUS.md).
+Sumber kebenaran: [PRD.md](docs/PRD.md) untuk fungsi, [DESIGN.md](docs/DESIGN.md) + [referensi/](docs/referensi/) untuk tampilan.
+Rencana kerja: [docs/PLAN.md](docs/PLAN.md). Status aktual: [STATUS.md](docs/STATUS.md).
 
 ## Stack (jangan diganti)
 
@@ -46,4 +46,4 @@ login Google/OTP. Komponen iuran di DESIGN.md/referensi (stempel LUNAS, badge "D
 - Kerjakan hanya fase yang diminta (lihat docs/PLAN.md).
 - Setiap akhir fase: jalankan app, cek di browser (390 px + desktop), jalankan tes, perbarui STATUS.md, lalu
   **BERHENTI dan laporkan**. Jangan lanjut ke fase berikutnya sebelum diminta.
-- Dokumen yang dijaga di root: CODEBASE.md, STATUS.md, DATABASE.md, DEVELOPMENT.md.
+- Dokumen yang dijaga di `docs/`: CODEBASE.md, STATUS.md, DATABASE.md, DEVELOPMENT.md.

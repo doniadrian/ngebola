@@ -5,7 +5,7 @@ export const alt = "Ngebola: cari lawan sparring fun football di Pekanbaru";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// Gambar pratinjau saat tautan dibagikan (WhatsApp, X, dll). Warna dari token DESIGN.md.
+// Gambar pratinjau saat tautan dibagikan (WhatsApp, X, dll). Warna dari token docs/DESIGN.md.
 export default function Image() {
   return new ImageResponse(
     (

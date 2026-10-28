@@ -1,7 +1,7 @@
 # Database & rencana migrasi ke Supabase
 
-Skema: [src/db/schema.ts](src/db/schema.ts) (Drizzle, SQLite lewat `better-sqlite3`). Daftar nilai status:
-[src/db/enums.ts](src/db/enums.ts). Migrasi SQL: [drizzle/](drizzle/). Rancangan per tabel: [docs/PLAN.md](docs/PLAN.md) bagian 2.
+Skema: [src/db/schema.ts](../src/db/schema.ts) (Drizzle, SQLite lewat `better-sqlite3`). Daftar nilai status:
+[src/db/enums.ts](../src/db/enums.ts). Migrasi SQL: [drizzle/](../drizzle/). Rancangan per tabel: [PLAN.md](PLAN.md) bagian 2.
 
 ## Konvensi (agar mudah dipindah ke Postgres)
 

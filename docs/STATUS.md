@@ -1,6 +1,6 @@
 # Status implementasi
 
-Terakhir diperbarui: 28 Okt 2026. Acuan fase: [docs/PLAN.md](docs/PLAN.md).
+Terakhir diperbarui: 28 Okt 2026. Acuan fase: [PLAN.md](PLAN.md).
 
 | Fase | Status |
 |---|---|
@@ -151,7 +151,7 @@ Tersedia:
 
 ## Pertentangan PRD vs DESIGN
 
-Dicatat di [docs/PLAN.md](docs/PLAN.md) bagian 5 (29 butir) beserta keputusan yang dipakai.
+Dicatat di [PLAN.md](PLAN.md) bagian 5 (29 butir) beserta keputusan yang dipakai.
 
 ## Beranda & footer baru (SEO)
 

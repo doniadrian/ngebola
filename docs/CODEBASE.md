@@ -1,7 +1,7 @@
 # Peta codebase
 
 Next.js 16 App Router + TypeScript + Tailwind v4 + shadcn/ui (Radix) yang di-restyle sesuai [DESIGN.md](DESIGN.md).
-Rencana lengkap: [docs/PLAN.md](docs/PLAN.md). Aturan tetap: [CLAUDE.md](CLAUDE.md).
+Rencana lengkap: [PLAN.md](PLAN.md). Aturan tetap: [CLAUDE.md](../CLAUDE.md).
 
 ## Struktur
 

@@ -28,7 +28,7 @@ export const metadata: Metadata = { title: "Galeri komponen" };
 
 const VARIAN = ["utama", "emas", "garis", "teks", "bahaya"] as const;
 const LABEL = { utama: "Gabung", emas: "Simpan", garis: "Jadwal", teks: "Lewati", bahaya: "Batalkan" };
-// Keadaan hover/ditekan dipaksa hanya untuk audit visual (nilai dari referensi/Matriks.html).
+// Keadaan hover/ditekan dipaksa hanya untuk audit visual (nilai dari docs/referensi/Matriks.html).
 const HOVER = {
   utama: "-translate-y-px shadow-keras-lg border-hijau-hover bg-hijau-hover",
   emas: "-translate-y-px shadow-keras-lg bg-emas-hover",
@@ -71,7 +71,7 @@ export default function Page() {
       <header className="flex flex-col gap-1">
         <p className="text-[13px] font-extrabold tracking-[.1em] text-emas-tua uppercase">Hanya development</p>
         <h1 className="text-[34px] leading-tight font-extrabold tracking-tight text-hijau md:text-[44px]">Galeri komponen</h1>
-        <p className="max-w-xl text-sm text-teks-2">Audit visual terhadap referensi/. Cek di lebar 390 px dan desktop.</p>
+        <p className="max-w-xl text-sm text-teks-2">Audit visual terhadap docs/referensi/. Cek di lebar 390 px dan desktop.</p>
       </header>
 
       <Seksi judul="01 · Tombol — varian × keadaan">

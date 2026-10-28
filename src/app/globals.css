@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* Token dari DESIGN.md + nilai yang dipakai di referensi/. Komponen hanya memakai utility dari token ini. */
+/* Token dari docs/DESIGN.md + nilai yang dipakai di docs/referensi/. Komponen hanya memakai utility dari token ini. */
 @theme {
   --font-sans: var(--font-jakarta), system-ui, sans-serif;
 
@@ -168,7 +168,7 @@ html body[data-scroll-locked] {
   }
 }
 
-/* Gerak dikurangi: animasi berhenti, spinner tetap berputar pelan (referensi/Anatomi.html). */
+/* Gerak dikurangi: animasi berhenti, spinner tetap berputar pelan (docs/referensi/Anatomi.html). */
 @media (prefers-reduced-motion: reduce) {
   *:not(.animate-spin),
   ::before,

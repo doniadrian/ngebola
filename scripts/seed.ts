@@ -45,7 +45,7 @@ async function main() {
 
   const adminPlatform = akun("admin@ngebola.test", "Sari Wulandari", "platform_admin", "1990-08-01");
 
-  // ── Club fiksi (lambang dari referensi/Lambang.html) ──────────────────────
+  // ── Club fiksi (lambang dari docs/referensi/Lambang.html) ──────────────────────
   const DATA_CLUB = [
     { key: "lancang", name: "Lancang Kuning FC", area: "Bukit Raya", level: "menengah", year: 2018, color: "#e3b52a", away: "#1f6b45", logo: true, admin: ["club@ngebola.test", "Dimas Pratama"], desc: "Club fun football karyawan & alumni. Main tiap Sabtu malam, terbuka untuk sparring mini soccer maupun 11v11." },
     { key: "garuda", name: "Garuda Sail FC", area: "Sail", level: "mahir", year: 2015, color: "#1f4e8c", away: "#f2ede0", logo: true, admin: ["garuda@ngebola.test", "Hendra Gunawan"], desc: "Komunitas bola Sail sejak 2015. Suka main cepat, bawa wasit sendiri." },

@@ -51,7 +51,7 @@ function EfekTekan() {
   return null;
 }
 
-// Ikon Phosphor di komponen klien: Bold secara bawaan (DESIGN.md). Komponen server memakai /ssr + weight="bold".
+// Ikon Phosphor di komponen klien: Bold secara bawaan (docs/DESIGN.md). Komponen server memakai /ssr + weight="bold".
 export function Penyedia({ children }: { children: ReactNode }) {
   return (
     <IconContext.Provider value={{ weight: "bold" }}>
