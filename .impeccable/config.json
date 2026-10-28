@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/components/ui/sheet.tsx"
+        ],
+        "createdAt": "2026-10-28T03:12:51.221Z",
+        "reason": "Design system: referensi/Umpan-Balik.html bottom sheet uses border-top 2px tinta with radius 26 26 0 0 (DESIGN.md sticker style)"
+      }
+    ]
+  }
+}

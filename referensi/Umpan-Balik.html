@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Ngebola — Umpan balik</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#123b2c;font-weight:700}a:hover{color:#0b2419}
+@keyframes nbshim{0%{background-position:-240px 0}100%{background-position:240px 0}}
+.sk{background:#e4ddcc linear-gradient(90deg,#e4ddcc 0,#efe9da 50%,#e4ddcc 100%) no-repeat;background-size:240px 100%;animation:nbshim 1.3s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.sk{animation:none}}
+</style>
+<div style="width: 1280px; min-height: 2060px; box-sizing: border-box; padding: 64px 72px 72px; background: #f2ede0; color: #14201a; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 52px;">
+
+  <header style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; border-bottom: 2px solid #123b2c; padding-bottom: 24px;">
+    <div>
+      <p style="margin: 0 0 6px; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">UI Kit v0.1 · Komponen 06</p>
+      <h1 style="margin: 0; font-size: 52px; line-height: 1; font-weight: 800; letter-spacing: -0.02em; color: #123b2c;">Umpan balik</h1>
+    </div>
+    <p style="margin: 0; max-width: 470px; font-size: 14px; line-height: 1.5; color: #3b4a41;">Setiap aksi dijawab: berhasil, gagal, sedang memuat, atau perlu konfirmasi. Nadanya santai seperti obrolan grup tim — tapi jelas apa yang terjadi dan apa langkah berikutnya.</p>
+  </header>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: start;">
+    <section style="display: flex; flex-direction: column; gap: 20px;">
+      <h2 style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">01 · Toast (muncul di atas bar navigasi, 4 detik)</h2>
+
+      <div role="status" style="display: flex; align-items: center; gap: 12px; padding: 12px 12px 12px 14px; border: 2px solid #0b2419; border-radius: 14px; background: #123b2c; color: #f2ede0; box-shadow: 0 4px 0 #0b2419; max-width: 400px;">
+        <span style="width: 30px; height: 30px; flex: 0 0 30px; border-radius: 50%; background: #c9a14a; border: 1.5px solid #0b2419; display: flex; align-items: center; justify-content: center; box-sizing: border-box;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14201a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5 10-10"></path></svg></span>
+        <span style="flex: 1 1 auto; font-size: 14px; line-height: 1.4;"><b>Ajakan terkirim</b> ke Garuda Sail FC</span>
+        <a href="#" style="color: #c9a14a; font-size: 14px; padding: 8px;">Lihat</a>
+      </div>
+
+      <div role="status" style="display: flex; align-items: center; gap: 12px; padding: 12px 12px 12px 14px; border: 2px solid #14201a; border-radius: 14px; background: #14201a; color: #f2ede0; box-shadow: 0 4px 0 #c9a14a; max-width: 400px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2ede0" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 22px;"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"></path></svg>
+        <span style="flex: 1 1 auto; font-size: 14px; line-height: 1.4;">Ajakan ke Rumbai Veteran dibatalkan</span>
+        <button style="height: 36px; padding: 0 12px; border-radius: 9px; border: 1.5px solid #c9a14a; background: transparent; color: #c9a14a; font-family: inherit; font-size: 13px; font-weight: 800;">Urungkan</button>
+      </div>
+
+      <div role="alert" style="display: flex; align-items: center; gap: 12px; padding: 12px 12px 12px 14px; border: 2px solid #14201a; border-radius: 14px; background: #a8382a; color: #ffffff; box-shadow: 0 4px 0 #14201a; max-width: 400px;">
+        <span style="width: 14px; height: 20px; flex: 0 0 14px; margin: 0 8px 0 6px; border-radius: 3px; background: #f6d36b; border: 1.5px solid #14201a; transform: rotate(-10deg); box-sizing: border-box;"></span>
+        <span style="flex: 1 1 auto; font-size: 14px; line-height: 1.4;"><b>Pembayaran gagal.</b> Saldo e-wallet kurang.</span>
+        <a href="#" style="color: #ffffff; font-size: 14px; padding: 8px; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap;">Coba lagi</a>
+      </div>
+
+      <div role="status" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 2px solid #14201a; border-radius: 14px; background: #fbf8f1; color: #14201a; box-shadow: 0 4px 0 #14201a; max-width: 400px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123b2c" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 22px;"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+        <span style="flex: 1 1 auto; font-size: 14px; line-height: 1.4;">Pengingat iuran dikirim ke <b>6 anggota</b></span>
+      </div>
+
+      <ul style="margin: 4px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 13px; line-height: 1.5; color: #3b4a41;">
+        <li>Maksimal satu baris pesan + satu aksi. Aksi merusak (batal, hapus) <b style="color: #14201a;">selalu</b> ada "Urungkan" 6 detik.</li>
+        <li>Error tidak hilang sendiri sampai diketuk atau dicoba lagi.</li>
+        <li>Hijau = berhasil · Tinta = netral/bisa diurungkan · Merah = gagal · Krem = info.</li>
+      </ul>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 20px;">
+      <h2 style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">02 · Banner di dalam halaman</h2>
+
+      <div style="display: flex; gap: 14px; align-items: flex-start; padding: 16px; border: 2px solid #14201a; border-radius: 16px; background: #f6e7bf;">
+        <span style="width: 16px; height: 22px; flex: 0 0 16px; margin: 2px 6px 0 4px; border-radius: 3px; background: #f6d36b; border: 1.5px solid #14201a; transform: rotate(-10deg); box-sizing: border-box;"></span>
+        <div style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-size: 15px; font-weight: 800;">Iuran kamu lewat tenggat 2 hari</span>
+          <span style="font-size: 13px; line-height: 1.5; color: #3b4a41;">Rp 35.000 untuk sparring vs Garuda Sail. Admin tim sudah mengingatkan.</span>
+          <button style="align-self: flex-start; margin-top: 8px; height: 40px; padding: 0 14px; border-radius: 10px; border: 2px solid #123b2c; background: #c9a14a; color: #14201a; box-shadow: 0 3px 0 #123b2c; font-family: inherit; font-size: 14px; font-weight: 700;">Bayar Sekarang</button>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 14px; align-items: center; padding: 14px 16px; border: 2px solid #123b2c; border-radius: 16px; background: #d5e6dc;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#123b2c" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 22px;"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.5h.01"></path></svg>
+        <span style="flex: 1 1 auto; font-size: 14px; line-height: 1.45;">Lengkapi <b>7 pemain</b> dulu supaya tim bisa terima ajakan sparring.</span>
+        <button aria-label="Tutup" style="width: 36px; height: 36px; flex: 0 0 36px; padding: 0; border: 0; border-radius: 10px; background: transparent; color: #123b2c; display: inline-flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+      </div>
+
+      <div style="display: flex; gap: 12px; align-items: center; padding: 10px 16px; border-radius: 12px; background: #14201a; color: #f2ede0;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a14a" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 20px;"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0M12 19h.01"></path><path d="M3 3l18 18"></path></svg>
+        <span style="flex: 1 1 auto; font-size: 13px; font-weight: 600;">Sinyal hilang. Perubahan disimpan &amp; dikirim saat online lagi.</span>
+      </div>
+      <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #3b4a41;">Banner tinggal di halaman sampai masalahnya beres. Kuning (kartu kuning) = perlu tindakan, hijau muda = saran, tinta = status koneksi di paling atas.</p>
+    </section>
+  </div>
+
+  <section style="display: flex; flex-direction: column; gap: 20px;">
+    <h2 style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">03 · Dialog, bottom sheet &amp; layar sukses</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: start;">
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Dialog konfirmasi (aksi Bahaya)</span>
+        <div style="position: relative; width: 360px; height: 720px; border: 2px solid #14201a; border-radius: 32px; overflow: hidden; background: #f2ede0;">
+          <div style="padding: 60px 18px 0; display: flex; flex-direction: column; gap: 14px;">
+            <div style="height: 22px; width: 50%; background: #ddd4bf; border-radius: 6px;"></div>
+            <div style="height: 180px; border: 2px solid #cfc6b1; border-radius: 18px; background: #fbf8f1;"></div>
+            <div style="height: 120px; border: 2px solid #cfc6b1; border-radius: 18px; background: #fbf8f1;"></div>
+          </div>
+          <div style="position: absolute; inset: 0; background: rgba(20,32,26,.6);"></div>
+          <div role="alertdialog" aria-labelledby="dlg-t" aria-describedby="dlg-d" style="position: absolute; left: 18px; right: 18px; top: 150px; padding: 24px 20px 20px; border: 2px solid #14201a; border-radius: 22px; background: #fbf8f1; box-shadow: 0 6px 0 #14201a; display: flex; flex-direction: column; gap: 14px;">
+            <div style="position: relative; height: 70px;">
+              <span style="position: absolute; left: 6px; top: 4px; width: 42px; height: 58px; border-radius: 6px; background: #a8382a; border: 2px solid #14201a; box-shadow: 0 3px 0 #14201a; transform: rotate(-12deg); box-sizing: border-box;"></span>
+              <span style="position: absolute; left: 40px; top: 18px; width: 30px; height: 30px; border-radius: 50%; background: #fbf8f1; border: 2px solid #14201a; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: #a8382a; box-sizing: border-box;">!</span>
+            </div>
+            <h3 id="dlg-t" style="margin: 0; font-size: 22px; line-height: 1.2; font-weight: 800;">Batalkan sparring?</h3>
+            <p id="dlg-d" style="margin: 0; font-size: 14px; line-height: 1.55; color: #3b4a41;">Garuda Sail FC langsung diberi tahu. Iuran yang sudah masuk (Rp 420.000) dikembalikan ke 12 anggota.</p>
+            <button style="margin-top: 6px; height: 52px; border-radius: 12px; border: 2px solid #123b2c; background: #a8382a; color: #ffffff; box-shadow: 0 4px 0 #123b2c; font-family: inherit; font-size: 16px; font-weight: 700;">Ya, Batalkan Match</button>
+            <button style="height: 52px; border-radius: 12px; border: 2px solid #123b2c; background: #fbf8f1; color: #123b2c; box-shadow: 0 4px 0 #123b2c; font-family: inherit; font-size: 16px; font-weight: 700;">Jangan, Tetap Main</button>
+          </div>
+        </div>
+        <span style="font-size: 12px; line-height: 1.5; color: #3b4a41; max-width: 360px;">Judul = pertanyaan, isi = akibatnya dengan angka nyata. Tombol aman paling bawah, dekat jempol. Label tombol menyebut aksinya, bukan "OK".</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Bottom sheet — tawar jadwal</span>
+        <div style="position: relative; width: 360px; height: 720px; border: 2px solid #14201a; border-radius: 32px; overflow: hidden; background: #f2ede0;">
+          <div style="padding: 60px 18px 0; display: flex; flex-direction: column; gap: 14px;">
+            <div style="height: 22px; width: 60%; background: #ddd4bf; border-radius: 6px;"></div>
+            <div style="height: 200px; border: 2px solid #cfc6b1; border-radius: 18px; background: #fbf8f1;"></div>
+          </div>
+          <div style="position: absolute; inset: 0; background: rgba(20,32,26,.6);"></div>
+          <div role="dialog" aria-labelledby="sh-t" style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 20px 28px; border-top: 2px solid #14201a; border-radius: 26px 26px 0 0; background: #f2ede0; display: flex; flex-direction: column; gap: 16px;">
+            <span style="align-self: center; width: 44px; height: 5px; border-radius: 999px; background: #14201a; opacity: .35;"></span>
+            <div>
+              <h3 id="sh-t" style="margin: 0; font-size: 20px; font-weight: 800;">Tawar jadwal</h3>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: #3b4a41;">Marpoyan Damai FC minta <b style="color: #14201a;">Rab, 4 Nov · 20.00</b></p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 13px; font-weight: 700;">Hari</span>
+              <div style="display: flex; gap: 8px;">
+                <button aria-pressed="false" style="flex: 1 1 0; display: flex; flex-direction: column; align-items: center; padding: 8px 0; border-radius: 12px; border: 2px solid #cfc6b1; background: #fbf8f1; font-family: inherit; color: #14201a;"><span style="font-size: 11px; font-weight: 800; color: #3b4a41;">RAB</span><span style="font-size: 18px; font-weight: 800; text-decoration: line-through; text-decoration-color: #a8382a; text-decoration-thickness: 2px;">4</span></button>
+                <button aria-pressed="false" style="flex: 1 1 0; display: flex; flex-direction: column; align-items: center; padding: 8px 0; border-radius: 12px; border: 2px solid #123b2c; background: #fbf8f1; font-family: inherit; color: #14201a;"><span style="font-size: 11px; font-weight: 800; color: #3b4a41;">KAM</span><span style="font-size: 18px; font-weight: 800;">5</span></button>
+                <button aria-pressed="true" style="flex: 1 1 0; display: flex; flex-direction: column; align-items: center; padding: 8px 0; border-radius: 12px; border: 2px solid #123b2c; background: #123b2c; color: #f2ede0; box-shadow: 0 3px 0 #c9a14a; font-family: inherit;"><span style="font-size: 11px; font-weight: 800; color: #c9a14a;">SAB</span><span style="font-size: 18px; font-weight: 800;">7</span></button>
+                <button aria-pressed="false" style="flex: 1 1 0; display: flex; flex-direction: column; align-items: center; padding: 8px 0; border-radius: 12px; border: 2px solid #123b2c; background: #fbf8f1; font-family: inherit; color: #14201a;"><span style="font-size: 11px; font-weight: 800; color: #3b4a41;">MIN</span><span style="font-size: 18px; font-weight: 800;">8</span></button>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 13px; font-weight: 700;">Jam</span>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <button aria-pressed="false" style="height: 40px; padding: 0 14px; border-radius: 999px; border: 2px solid #123b2c; background: #fbf8f1; color: #123b2c; font-family: inherit; font-size: 14px; font-weight: 700;">16.00</button>
+                <button aria-pressed="true" style="height: 40px; padding: 0 14px; border-radius: 999px; border: 2px solid #123b2c; background: #c9a14a; color: #14201a; font-family: inherit; font-size: 14px; font-weight: 700;">19.00</button>
+                <button aria-pressed="false" style="height: 40px; padding: 0 14px; border-radius: 999px; border: 2px solid #123b2c; background: #fbf8f1; color: #123b2c; font-family: inherit; font-size: 14px; font-weight: 700;">21.00</button>
+              </div>
+            </div>
+            <label for="sh-msg" style="font-size: 13px; font-weight: 700;">Pesan <span style="font-weight: 600; color: #3b4a41;">(opsional)</span></label>
+            <input id="sh-msg" value="Rabu kami ada yang lembur, Sabtu gimana?" style="margin-top: -8px; height: 48px; box-sizing: border-box; padding: 0 14px; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 15px; color: #14201a; outline: none;">
+            <button style="height: 56px; border-radius: 14px; border: 2px solid #123b2c; background: #123b2c; color: #f2ede0; box-shadow: 0 5px 0 #c9a14a; font-family: inherit; font-size: 17px; font-weight: 800;">Kirim Tawaran · Sab 7, 19.00</button>
+          </div>
+        </div>
+        <span style="font-size: 12px; line-height: 1.5; color: #3b4a41; max-width: 360px;">Sheet untuk tugas singkat tanpa pindah halaman. Usulan lawan dicoret merah, pilihan kita disebut ulang di tombol.</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Layar sukses — iuran lunas</span>
+        <div style="position: relative; width: 360px; height: 720px; border: 2px solid #14201a; border-radius: 32px; overflow: hidden; background-color: #123b2c; background-image: repeating-linear-gradient(90deg, #123b2c 0 45px, #164535 45px 90px); color: #f2ede0;">
+          <span style="position: absolute; left: 40px; top: 80px; width: 12px; height: 20px; background: #c9a14a; border: 1.5px solid #0b2419; transform: rotate(-25deg);"></span>
+          <span style="position: absolute; left: 290px; top: 70px; width: 10px; height: 16px; background: #f2ede0; border: 1.5px solid #0b2419; transform: rotate(30deg);"></span>
+          <span style="position: absolute; left: 250px; top: 150px; width: 14px; height: 14px; border-radius: 50%; background: #e46a1f; border: 1.5px solid #0b2419;"></span>
+          <span style="position: absolute; left: 70px; top: 200px; width: 10px; height: 18px; background: #a8382a; border: 1.5px solid #0b2419; transform: rotate(18deg);"></span>
+          <span style="position: absolute; left: 310px; top: 240px; width: 12px; height: 20px; background: #c9a14a; border: 1.5px solid #0b2419; transform: rotate(-40deg);"></span>
+          <span style="position: absolute; left: 30px; top: 300px; width: 12px; height: 12px; border-radius: 50%; background: #f2ede0; border: 1.5px solid #0b2419;"></span>
+          <img src="../assets/maskot/pakbola-maskot-gelap.png" alt="" style="position: absolute; left: 70px; top: 96px; height: 270px; width: auto;">
+          <span style="position: absolute; left: 104px; top: 384px; display: inline-flex; align-items: center; gap: 8px; height: 50px; padding: 0 16px; border-radius: 8px; border: 3px solid #c9a14a; outline: 2px solid #c9a14a; outline-offset: 4px; color: #c9a14a; background: rgba(18,59,44,.85); font-size: 22px; font-weight: 800; letter-spacing: .16em; transform: rotate(-10deg);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5 10-10"></path></svg>LUNAS</span>
+          <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 0 24px 32px; display: flex; flex-direction: column; gap: 12px; text-align: center;">
+            <h3 style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em;">Iuran beres!</h3>
+            <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.5; color: #c8d3cb;">Rp 35.000 untuk sparring vs Garuda Sail FC sudah tercatat. Tinggal datang &amp; main.</p>
+            <button style="height: 56px; border-radius: 14px; border: 2px solid #0b2419; background: #c9a14a; color: #14201a; box-shadow: 0 5px 0 #0b2419; font-family: inherit; font-size: 17px; font-weight: 800;">Lihat Jadwal Match</button>
+            <button style="height: 48px; border: 0; background: transparent; color: #f2ede0; text-decoration: underline; text-decoration-color: #c9a14a; text-decoration-thickness: 2px; text-underline-offset: 5px; font-family: inherit; font-size: 15px; font-weight: 700;">Kembali ke Beranda</button>
+          </div>
+        </div>
+        <span style="font-size: 12px; line-height: 1.5; color: #3b4a41; max-width: 360px;">Momen besar (iuran lunas, ajakan diterima, menang) dapat layar penuh dengan Pak Bola. Yang kecil cukup toast.</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 20px;">
+    <h2 style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">04 · Skeleton saat memuat</h2>
+    <div style="display: flex; gap: 32px; align-items: flex-start;">
+      <div aria-busy="true" aria-label="Memuat ajakan" style="width: 360px; flex: 0 0 360px; box-sizing: border-box; padding: 20px; border: 2px solid #cfc6b1; border-radius: 20px; background: #fbf8f1; display: flex; flex-direction: column; gap: 16px;">
+        <div class="sk" style="height: 26px; width: 120px; border-radius: 7px;"></div>
+        <div style="display: flex; justify-content: space-around; align-items: center; padding: 16px 0; background: #f2ede0; border-radius: 14px;">
+          <div class="sk" style="width: 52px; height: 60px; border-radius: 14px 14px 26px 26px;"></div>
+          <div class="sk" style="width: 30px; height: 20px; border-radius: 6px;"></div>
+          <div class="sk" style="width: 52px; height: 60px; border-radius: 14px 14px 26px 26px;"></div>
+        </div>
+        <div class="sk" style="height: 14px; width: 80%; border-radius: 6px;"></div>
+        <div class="sk" style="height: 14px; width: 65%; border-radius: 6px;"></div>
+        <div class="sk" style="height: 14px; width: 72%; border-radius: 6px;"></div>
+        <div style="display: flex; gap: 8px;"><div class="sk" style="height: 40px; width: 70px; border-radius: 10px;"></div><div class="sk" style="height: 40px; flex: 1 1 auto; border-radius: 10px;"></div></div>
+      </div>
+      <div aria-busy="true" aria-label="Memuat anggota" style="width: 360px; flex: 0 0 360px; box-sizing: border-box; padding: 20px; border: 2px solid #cfc6b1; border-radius: 20px; background: #fbf8f1; display: flex; flex-direction: column; gap: 14px;">
+        <div class="sk" style="height: 18px; width: 40%; border-radius: 6px;"></div>
+        <div style="display: flex; gap: 12px; align-items: center;"><div class="sk" style="width: 44px; height: 44px; border-radius: 50%;"></div><div style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 6px;"><div class="sk" style="height: 13px; width: 55%; border-radius: 5px;"></div><div class="sk" style="height: 11px; width: 35%; border-radius: 5px;"></div></div><div class="sk" style="width: 64px; height: 24px; border-radius: 6px;"></div></div>
+        <div style="display: flex; gap: 12px; align-items: center;"><div class="sk" style="width: 44px; height: 44px; border-radius: 50%;"></div><div style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 6px;"><div class="sk" style="height: 13px; width: 48%; border-radius: 5px;"></div><div class="sk" style="height: 11px; width: 30%; border-radius: 5px;"></div></div><div class="sk" style="width: 64px; height: 24px; border-radius: 6px;"></div></div>
+        <div style="display: flex; gap: 12px; align-items: center;"><div class="sk" style="width: 44px; height: 44px; border-radius: 50%;"></div><div style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 6px;"><div class="sk" style="height: 13px; width: 60%; border-radius: 5px;"></div><div class="sk" style="height: 11px; width: 25%; border-radius: 5px;"></div></div><div class="sk" style="width: 64px; height: 24px; border-radius: 6px;"></div></div>
+      </div>
+      <ul style="margin: 0; padding-left: 18px; flex: 1 1 auto; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.55; color: #3b4a41;">
+        <li>Bentuk skeleton meniru kartu aslinya — lambang jadi tameng abu, tombol jadi balok abu — supaya tidak ada lompatan tata letak saat data datang.</li>
+        <li>Kilau berjalan 1,3 detik; berhenti total kalau pengguna memilih <i>kurangi gerakan</i>.</li>
+        <li>Tepi kartu abu (#CFC6B1), bukan hijau: belum bisa diklik.</li>
+        <li>Muat lebih dari 8 detik → ganti dengan pesan + tombol "Coba lagi".</li>
+      </ul>
+    </div>
+  </section>
+
+  <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b5320; font-weight: 600;">Nama tim, nominal &amp; jadwal di papan ini fiktif, hanya contoh isi.</p>
+</div>
+</body>
+</html>

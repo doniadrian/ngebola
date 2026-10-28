@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1793136935046,
+      "tag": "0000_awal",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1793138849826,
+      "tag": "0001_skor_akhir",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1793159330856,
+      "tag": "0002_persetujuan",
+      "breakpoints": true
+    }
+  ]
+}

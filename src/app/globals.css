@@ -1,0 +1,195 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Token dari DESIGN.md + nilai yang dipakai di referensi/. Komponen hanya memakai utility dari token ini. */
+@theme {
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+
+  --color-hijau: #123b2c;
+  --color-hijau-hover: #1d5641;
+  --color-hijau-tua: #0b2419;
+  --color-hijau-garis: #164535;
+  --color-emas: #c9a14a;
+  --color-emas-hover: #d6b263;
+  --color-emas-tekan: #b48d3a;
+  --color-emas-tua: #6b5320;
+  --color-krem: #f2ede0;
+  --color-krem-terang: #fbf8f1;
+  --color-krem-tekan: #e9e2d0;
+  --color-krem-redup: #c8d3cb;
+  --color-tinta: #14201a;
+  --color-teks-2: #3b4a41;
+  --color-placeholder: #6f6a5a;
+  --color-redup: #a39d8c;
+  --color-merah: #a8382a;
+  --color-merah-hover: #b8452f;
+  --color-merah-tekan: #8e2e22;
+  --color-merah-gelap: #c24a36;
+  --color-kuning-kartu: #f6d36b;
+  --color-nonaktif-bg: #e4ddcc;
+  --color-nonaktif-tepi: #cfc6b1;
+  --color-nonaktif-teks: #8a8574;
+  --color-kilau: #efe9da;
+  --color-bg-menunggu: #f6e7bf;
+  --color-bg-ditawar: #dbe5f2;
+  --color-bg-saran: #d5e6dc;
+  --color-bg-error: #fdf3f1;
+
+  --radius-badge: 7px;
+  --radius-kecil: 10px;
+  --radius-tombol: 12px;
+  --radius-besar: 14px;
+  --radius-popover: 16px;
+  --radius-kartu: 20px;
+  --radius-dialog: 22px;
+  --radius-sheet: 26px;
+
+  /* Bayangan keras tanpa blur; warnanya diganti dengan utility shadow-<warna>. */
+  --shadow-keras-xs: 0 2px 0 #14201a;
+  --shadow-keras-sm: 0 3px 0 #123b2c;
+  --shadow-keras: 0 4px 0 #123b2c;
+  --shadow-keras-lg: 0 5px 0 #123b2c;
+  --shadow-keras-xl: 0 6px 0 #123b2c;
+
+  /* Gerak: tekan = cepat & tegas, lepas = memantul sedikit (pegas), muncul = meluncur halus. */
+  --ease-pegas: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-keluar: cubic-bezier(0.22, 1, 0.36, 1);
+
+  @keyframes muncul { from { opacity: 0; translate: 0 24px; } to { opacity: 1; translate: 0 0; } }
+  --animate-kilau: kilau 1.3s ease-in-out infinite;
+  --animate-masuk: masuk 160ms ease-out backwards;
+  --animate-pop: pop 280ms var(--ease-pegas) backwards;
+  --animate-dialog-masuk: dialog-masuk 280ms var(--ease-pegas) both;
+  --animate-dialog-keluar: dialog-keluar 150ms ease-in both;
+  --animate-lapis-masuk: lapis-masuk 200ms ease-out both;
+  --animate-lapis-keluar: lapis-keluar 150ms ease-in both;
+  --animate-sheet-naik: sheet-naik 360ms var(--ease-keluar) both;
+  --animate-sheet-turun: sheet-turun 220ms ease-in both;
+  --animate-sheet-kanan: sheet-kanan 360ms var(--ease-keluar) both;
+  --animate-sheet-kanan-keluar: sheet-kanan-keluar 220ms ease-in both;
+  @keyframes masuk {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes pop {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes dialog-masuk {
+    from { opacity: 0; transform: translateY(14px) scale(0.92); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes dialog-keluar {
+    from { opacity: 1; transform: none; }
+    to { opacity: 0; transform: translateY(8px) scale(0.96); }
+  }
+  @keyframes lapis-masuk { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes lapis-keluar { from { opacity: 1; } to { opacity: 0; } }
+  @keyframes sheet-naik { from { transform: translateY(100%); } to { transform: none; } }
+  @keyframes sheet-turun { from { transform: none; } to { transform: translateY(100%); } }
+  @keyframes sheet-kanan { from { transform: translateX(100%); } to { transform: none; } }
+  @keyframes sheet-kanan-keluar { from { transform: none; } to { transform: translateX(100%); } }
+  @keyframes kilau {
+    0% { background-position: -240px 0; }
+    100% { background-position: 240px 0; }
+  }
+}
+
+/* Pengunci scroll Radix (Select/Dialog/Sheet) menambah margin-right seukuran scrollbar. Lebar itu sudah dicadangkan oleh
+   scrollbar-gutter: stable, jadi tanpa ini isi halaman bergeser saat dropdown dibuka. */
+html body[data-scroll-locked] {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Keadaan "ditekan": :active asli + penanda data-ditekan dari EfekTekan (supaya ketukan singkat di HP tetap terlihat). */
+@custom-variant tekan (&:is(:active, [data-ditekan]));
+
+/* Variabel semantik shadcn dipetakan ke token Ngebola (tanpa mode gelap, lihat PLAN.md butir 7). */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--card);
+  --color-popover-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--card);
+  --color-secondary-foreground: var(--primary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: var(--primary);
+  --radius-sm: 7px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 14px;
+  --radius-2xl: 20px;
+}
+
+:root {
+  --background: #f2ede0;
+  --foreground: #14201a;
+  --card: #fbf8f1;
+  --primary: #123b2c;
+  --primary-foreground: #f2ede0;
+  --muted: #e4ddcc;
+  --muted-foreground: #3b4a41;
+  --accent: #d5e6dc;
+  --destructive: #a8382a;
+  --border: #123b2c;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-hijau;
+  }
+  html {
+    /* Lebar halaman tetap saat scrollbar muncul/hilang: mencegah isi bergeser ke samping tiap pindah halaman. */
+    scrollbar-gutter: stable;
+    @apply font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-krem text-tinta;
+  }
+  ::placeholder {
+    @apply text-placeholder;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Gerak dikurangi: animasi berhenti, spinner tetap berputar pelan (referensi/Anatomi.html). */
+@media (prefers-reduced-motion: reduce) {
+  *:not(.animate-spin),
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-spin {
+    animation-duration: 2.4s !important;
+  }
+}
+
+/* Muncul saat digulir (CSS murni, tanpa JS). Tanpa dukungan view() atau dengan gerak dikurangi: tampil langsung. */
+@utility muncul {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: muncul linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}

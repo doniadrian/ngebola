@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Ngebola — Form &amp; input</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#123b2c;font-weight:700}a:hover{color:#0b2419}
+input::placeholder,textarea::placeholder{color:#6f6a5a}
+</style>
+<div style="width: 1280px; min-height: 1900px; box-sizing: border-box; padding: 64px 72px 72px; background: #f2ede0; color: #14201a; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 52px;">
+
+  <header style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; border-bottom: 2px solid #123b2c; padding-bottom: 24px;">
+    <div>
+      <p style="margin: 0 0 6px; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">UI Kit v0.1 · Komponen 04</p>
+      <h1 style="margin: 0; font-size: 52px; line-height: 1; font-weight: 800; letter-spacing: -0.02em; color: #123b2c;">Form &amp; input</h1>
+    </div>
+    <p style="margin: 0; max-width: 460px; font-size: 14px; line-height: 1.5; color: #3b4a41;">Kolom isian <b style="color: #14201a;">tidak punya bayangan keras</b> — itu jatah tombol. Kolom terasa "tertanam", tombol terasa "menonjol". Teks isian 16px supaya iPhone tidak zoom otomatis.</p>
+  </header>
+
+  <section style="display: flex; flex-direction: column; gap: 20px;">
+    <h2 style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">01 · Kolom teks — keadaan</h2>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Normal</span>
+        <label for="f1" style="font-size: 14px; font-weight: 700;">Nama tim</label>
+        <input id="f1" placeholder="mis. Garuda FC" style="height: 52px; box-sizing: border-box; padding: 0 16px; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 16px; color: #14201a; outline: none;">
+        <span style="font-size: 13px; color: #3b4a41;">Nama yang dilihat tim lawan.</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Fokus</span>
+        <label for="f2" style="font-size: 14px; font-weight: 700;">Nama tim</label>
+        <input id="f2" value="Lancang Ku" style="height: 52px; box-sizing: border-box; padding: 0 16px; border: 2px solid #123b2c; border-radius: 12px; background: #ffffff; box-shadow: 0 0 0 4px rgba(201,161,74,.6); font-family: inherit; font-size: 16px; color: #14201a; outline: none;">
+        <span style="font-size: 13px; color: #3b4a41;">Nama yang dilihat tim lawan.</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Terisi</span>
+        <label for="f3" style="font-size: 14px; font-weight: 700;">Nama tim</label>
+        <input id="f3" value="Lancang Kuning FC" style="height: 52px; box-sizing: border-box; padding: 0 16px; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 16px; font-weight: 600; color: #14201a; outline: none;">
+        <span style="font-size: 13px; color: #3b4a41;">Nama yang dilihat tim lawan.</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Error</span>
+        <label for="f4" style="font-size: 14px; font-weight: 700;">Nama tim</label>
+        <input id="f4" value="LK" aria-invalid="true" aria-describedby="f4e" style="height: 52px; box-sizing: border-box; padding: 0 16px; border: 2px solid #a8382a; border-radius: 12px; background: #fdf3f1; font-family: inherit; font-size: 16px; font-weight: 600; color: #14201a; outline: none;">
+        <span id="f4e" style="display: flex; gap: 6px; align-items: flex-start; font-size: 13px; font-weight: 700; color: #a8382a;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 16px; margin-top: 1px;"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5.5M12 16.5h.01"></path></svg>Minimal 3 huruf.</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Nonaktif</span>
+        <label for="f5" style="font-size: 14px; font-weight: 700; color: #6f6a5a;">Kota</label>
+        <input id="f5" value="Pekanbaru" disabled="" style="height: 52px; box-sizing: border-box; padding: 0 16px; border: 2px solid #cfc6b1; border-radius: 12px; background: #e4ddcc; font-family: inherit; font-size: 16px; color: #6f6a5a; outline: none;">
+        <span style="font-size: 13px; color: #3b4a41;">Kota lain menyusul.</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 20px;">
+    <h2 style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">02 · Kolom khusus Ngebola</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 32px; align-items: start;">
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <label for="rp" style="font-size: 14px; font-weight: 700;">Iuran per orang</label>
+        <div style="display: flex; height: 52px; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; overflow: hidden; box-sizing: border-box;">
+          <span style="display: flex; align-items: center; padding: 0 14px; background: #c9a14a; border-right: 2px solid #123b2c; font-size: 16px; font-weight: 800;">Rp</span>
+          <input id="rp" value="35.000" inputmode="numeric" style="flex: 1 1 auto; min-width: 0; border: 0; background: transparent; padding: 0 12px; font-family: inherit; font-size: 20px; font-weight: 800; color: #123b2c; outline: none;">
+          <span style="display: flex; align-items: center; padding: 0 14px; font-size: 14px; font-weight: 600; color: #3b4a41; white-space: nowrap;">/ orang</span>
+        </div>
+        <span style="font-size: 13px; color: #3b4a41;">Titik ribuan muncul otomatis. Total 18 pemain = <b style="color: #14201a;">Rp 630.000</b></span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 14px; font-weight: 700;">Jam main</span>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <label style="flex: 1 1 0; display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 14px; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; box-sizing: border-box;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#123b2c" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5h5"></path></svg><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Mulai</span><input value="19.00" style="width: 100%; border: 0; background: transparent; font-family: inherit; font-size: 16px; font-weight: 700; color: #14201a; outline: none;"></label>
+          <span style="font-weight: 800; color: #3b4a41;">–</span>
+          <label style="flex: 1 1 0; display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 14px; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; box-sizing: border-box;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Selesai</span><input value="21.00" style="width: 100%; border: 0; background: transparent; font-family: inherit; font-size: 16px; font-weight: 700; color: #14201a; outline: none;"></label>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button aria-pressed="false" style="height: 36px; padding: 0 14px; border-radius: 999px; border: 2px solid #123b2c; background: #fbf8f1; color: #123b2c; font-family: inherit; font-size: 13px; font-weight: 700;">Sore</button>
+          <button aria-pressed="true" style="height: 36px; padding: 0 14px; border-radius: 999px; border: 2px solid #123b2c; background: #c9a14a; color: #14201a; font-family: inherit; font-size: 13px; font-weight: 700;">Malam 19–21</button>
+          <button aria-pressed="false" style="height: 36px; padding: 0 14px; border-radius: 999px; border: 2px solid #123b2c; background: #fbf8f1; color: #123b2c; font-family: inherit; font-size: 13px; font-weight: 700;">Malam 21–23</button>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span id="stp" style="font-size: 14px; font-weight: 700;">Pemain per tim</span>
+        <div role="group" aria-labelledby="stp" style="display: flex; align-items: center; gap: 14px;">
+          <button aria-label="Kurangi" style="width: 52px; height: 52px; border-radius: 12px; border: 2px solid #123b2c; background: #fbf8f1; color: #123b2c; box-shadow: 0 4px 0 #123b2c; display: inline-flex; align-items: center; justify-content: center; padding: 0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+          <div style="display: flex; flex-direction: column; align-items: center; min-width: 72px;"><span style="font-size: 32px; font-weight: 800; line-height: 1; color: #123b2c;">7</span><span style="font-size: 12px; font-weight: 700; color: #3b4a41;">7 lawan 7</span></div>
+          <button aria-label="Tambah" style="width: 52px; height: 52px; border-radius: 12px; border: 2px solid #123b2c; background: #123b2c; color: #f2ede0; box-shadow: 0 4px 0 #c9a14a; display: inline-flex; align-items: center; justify-content: center; padding: 0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+        </div>
+        <span style="font-size: 13px; color: #3b4a41;">Futsal 5 · Mini soccer 6–8 · Lapangan besar 11</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 14px; font-weight: 700;">Tanggal main</span>
+        <button style="display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 14px; border: 2px solid #123b2c; border-radius: 12px; background: #ffffff; box-shadow: 0 0 0 4px rgba(201,161,74,.6); font-family: inherit; font-size: 16px; font-weight: 700; color: #14201a; text-align: left;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#123b2c" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="16" rx="1.5"></rect><path d="M16 2.5v4M8 2.5v4M3.5 9h17"></path></svg><span style="flex: 1 1 auto;">Sab, 31 Okt 2026</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#123b2c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"></path></svg></button>
+        <div style="margin-top: 4px; padding: 16px; border: 2px solid #123b2c; border-radius: 16px; background: #fbf8f1; box-shadow: 0 6px 0 #123b2c;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <button aria-label="Bulan sebelumnya" style="width: 36px; height: 36px; border-radius: 10px; border: 2px solid #cfc6b1; background: transparent; color: #123b2c; display: inline-flex; align-items: center; justify-content: center; padding: 0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+            <span style="font-size: 15px; font-weight: 800;">Oktober 2026</span>
+            <button aria-label="Bulan berikutnya" style="width: 36px; height: 36px; border-radius: 10px; border: 2px solid #123b2c; background: transparent; color: #123b2c; display: inline-flex; align-items: center; justify-content: center; padding: 0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; text-align: center; font-size: 13px;">
+            <span style="font-size: 11px; font-weight: 800; color: #6b5320;">SN</span><span style="font-size: 11px; font-weight: 800; color: #6b5320;">SL</span><span style="font-size: 11px; font-weight: 800; color: #6b5320;">RB</span><span style="font-size: 11px; font-weight: 800; color: #6b5320;">KM</span><span style="font-size: 11px; font-weight: 800; color: #6b5320;">JM</span><span style="font-size: 11px; font-weight: 800; color: #6b5320;">SB</span><span style="font-size: 11px; font-weight: 800; color: #6b5320;">MG</span>
+            <span></span><span></span><span></span><span style="line-height: 34px; color: #a39d8c;">1</span><span style="line-height: 34px; color: #a39d8c;">2</span><span style="line-height: 34px; color: #a39d8c;">3</span><span style="line-height: 34px; color: #a39d8c;">4</span>
+            <span style="line-height: 34px; color: #a39d8c;">5</span><span style="line-height: 34px; color: #a39d8c;">6</span><span style="line-height: 34px; color: #a39d8c;">7</span><span style="line-height: 34px; color: #a39d8c;">8</span><span style="line-height: 34px; color: #a39d8c;">9</span><span style="line-height: 34px; color: #a39d8c;">10</span><span style="line-height: 34px; color: #a39d8c;">11</span>
+            <span style="line-height: 34px; color: #a39d8c;">12</span><span style="line-height: 34px; color: #a39d8c;">13</span><span style="line-height: 34px; color: #a39d8c;">14</span><span style="line-height: 34px; color: #a39d8c;">15</span><span style="line-height: 34px; color: #a39d8c;">16</span><span style="line-height: 34px; color: #a39d8c;">17</span><span style="line-height: 34px; color: #a39d8c;">18</span>
+            <span style="line-height: 34px; color: #a39d8c;">19</span><span style="line-height: 34px; color: #a39d8c;">20</span><span style="line-height: 34px; color: #a39d8c;">21</span><span style="line-height: 34px; color: #a39d8c;">22</span><span style="line-height: 34px; color: #a39d8c;">23</span><span style="line-height: 34px; color: #a39d8c;">24</span><span style="line-height: 34px; color: #a39d8c;">25</span>
+            <span style="line-height: 34px; color: #a39d8c;">26</span><span style="line-height: 30px; font-weight: 800; border: 2px solid #123b2c; border-radius: 10px;">27</span><span style="line-height: 34px; font-weight: 600;">28</span><span style="line-height: 34px; font-weight: 600;">29</span><span style="line-height: 34px; font-weight: 600;">30</span><span style="line-height: 30px; font-weight: 800; background: #123b2c; color: #f2ede0; border: 2px solid #123b2c; border-radius: 10px; box-shadow: 0 3px 0 #c9a14a;">31</span><span></span>
+          </div>
+          <div style="display: flex; gap: 14px; margin-top: 12px; font-size: 12px; color: #3b4a41;"><span style="display: flex; gap: 6px; align-items: center;"><span style="width: 12px; height: 12px; border: 2px solid #123b2c; border-radius: 4px;"></span>Hari ini</span><span style="display: flex; gap: 6px; align-items: center;"><span style="width: 12px; height: 12px; background: #123b2c; border-radius: 4px;"></span>Dipilih</span></div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 14px; font-weight: 700;">Lapangan</span>
+        <button style="display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 14px; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 16px; font-weight: 700; color: #14201a; text-align: left;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#123b2c" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="3"></circle><path d="M19.5 10c0 6.75-7.5 12-7.5 12S4.5 16.75 4.5 10a7.5 7.5 0 0 1 15 0z"></path></svg><span style="flex: 1 1 auto;">Lapangan Arengka</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#123b2c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"></path></svg></button>
+        <ul role="listbox" aria-label="Pilih lapangan" style="margin: 4px 0 0; padding: 6px; list-style: none; border: 2px solid #123b2c; border-radius: 16px; background: #fbf8f1; box-shadow: 0 6px 0 #123b2c; display: flex; flex-direction: column; gap: 2px;">
+          <li style="padding: 6px 8px 10px;"><div style="display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; border: 2px solid #cfc6b1; border-radius: 10px; color: #6f6a5a; font-size: 14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>Cari lapangan…</div></li>
+          <li role="option" aria-selected="true" style="display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px; background: #d5e6dc;"><div style="flex: 1 1 auto; display: flex; flex-direction: column;"><span style="font-size: 15px; font-weight: 800;">Lapangan Arengka</span><span style="font-size: 12px; color: #3b4a41;">Mini soccer · 2,1 km · Rp 450rb/2 jam</span></div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#123b2c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5 10-10"></path></svg></li>
+          <li role="option" aria-selected="false" style="display: flex; flex-direction: column; padding: 10px 12px; border-radius: 10px;"><span style="font-size: 15px; font-weight: 800;">GOR Rumbai</span><span style="font-size: 12px; color: #3b4a41;">Futsal · 6,8 km · Rp 300rb/2 jam</span></li>
+          <li role="option" aria-selected="false" style="display: flex; flex-direction: column; padding: 10px 12px; border-radius: 10px;"><span style="font-size: 15px; font-weight: 800;">Arena Soekarno-Hatta</span><span style="font-size: 12px; color: #3b4a41;">Mini soccer · 3,4 km · Rp 500rb/2 jam</span></li>
+          <li style="padding: 8px 12px 6px; border-top: 1.5px dashed #cfc6b1; margin-top: 4px;"><a href="#" style="font-size: 14px;">+ Lapangan belum terdaftar</a></li>
+        </ul>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <label for="cat" style="font-size: 14px; font-weight: 700;">Catatan untuk lawan <span style="font-weight: 600; color: #3b4a41;">(opsional)</span></label>
+        <textarea id="cat" rows="4" style="box-sizing: border-box; padding: 14px 16px; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 16px; line-height: 1.5; color: #14201a; resize: none; outline: none;">Bawa rompi 2 warna ya, kami sedia bola &amp; air minum.</textarea>
+        <span style="align-self: flex-end; font-size: 12px; font-weight: 700; color: #3b4a41;">52 / 200</span>
+
+        <label for="cari" style="font-size: 14px; font-weight: 700; margin-top: 14px;">Kolom pencarian</label>
+        <div style="display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 8px 0 16px; border: 2px solid #123b2c; border-radius: 999px; background: #fbf8f1; box-sizing: border-box;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#123b2c" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <input id="cari" value="sukajadi" style="flex: 1 1 auto; min-width: 0; border: 0; background: transparent; font-family: inherit; font-size: 16px; color: #14201a; outline: none;">
+          <button aria-label="Hapus pencarian" style="width: 36px; height: 36px; border-radius: 50%; border: 0; background: #e4ddcc; color: #14201a; display: inline-flex; align-items: center; justify-content: center; padding: 0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+        </div>
+        <span style="font-size: 13px; color: #3b4a41;">Pencarian berbentuk pil, beda dari kolom isian biasa.</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 20px;">
+    <h2 style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">03 · Pilihan, sakelar &amp; unggah</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; align-items: start;">
+
+      <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px;">
+        <legend style="font-size: 14px; font-weight: 700; padding: 0; margin-bottom: 10px;">Sewa lapangan dibayar</legend>
+        <label style="display: flex; gap: 12px; align-items: center; padding: 12px 14px; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; box-shadow: 0 3px 0 #123b2c;"><span style="width: 22px; height: 22px; flex: 0 0 22px; border-radius: 50%; border: 2px solid #123b2c; background: #fbf8f1; display: flex; align-items: center; justify-content: center; box-sizing: border-box;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #123b2c;"></span></span><span style="display: flex; flex-direction: column;"><span style="font-size: 15px; font-weight: 800;">Patungan 50 : 50</span><span style="font-size: 12px; color: #3b4a41;">Paling umum</span></span></label>
+        <label style="display: flex; gap: 12px; align-items: center; padding: 12px 14px; border: 2px solid #cfc6b1; border-radius: 12px;"><span style="width: 22px; height: 22px; flex: 0 0 22px; border-radius: 50%; border: 2px solid #123b2c; background: #fbf8f1; box-sizing: border-box;"></span><span style="font-size: 15px; font-weight: 700;">Tim kami bayar penuh</span></label>
+        <label style="display: flex; gap: 12px; align-items: center; padding: 12px 14px; border: 2px solid #cfc6b1; border-radius: 12px;"><span style="width: 22px; height: 22px; flex: 0 0 22px; border-radius: 50%; border: 2px solid #123b2c; background: #fbf8f1; box-sizing: border-box;"></span><span style="font-size: 15px; font-weight: 700;">Yang kalah bayar</span></label>
+      </fieldset>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 14px; font-weight: 700;">Kotak centang</span>
+        <label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.4;"><span style="width: 24px; height: 24px; flex: 0 0 24px; border-radius: 7px; border: 2px solid #123b2c; background: #123b2c; color: #c9a14a; display: flex; align-items: center; justify-content: center; box-sizing: border-box;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5 10-10"></path></svg></span>Tim kami bawa wasit sendiri</label>
+        <label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.4;"><span style="width: 24px; height: 24px; flex: 0 0 24px; border-radius: 7px; border: 2px solid #123b2c; background: #fbf8f1; box-sizing: border-box;"></span>Butuh rompi pembeda</label>
+        <label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.4; color: #6f6a5a;"><span style="width: 24px; height: 24px; flex: 0 0 24px; border-radius: 7px; border: 2px solid #cfc6b1; background: #e4ddcc; box-sizing: border-box;"></span>Siaran langsung (segera)</label>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 14px; font-weight: 700;">Sakelar</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
+          <span style="display: flex; flex-direction: column;"><span style="font-size: 15px; font-weight: 700;">Ingatkan iuran otomatis</span><span style="font-size: 12px; color: #3b4a41;">H-1 tenggat, lewat WhatsApp</span></span>
+          <button role="switch" aria-checked="true" aria-label="Ingatkan iuran otomatis" style="flex: 0 0 56px; width: 56px; height: 32px; padding: 0; border-radius: 999px; border: 2px solid #123b2c; background: #123b2c; position: relative;"><span style="position: absolute; top: 2px; right: 2px; width: 24px; height: 24px; border-radius: 50%; background: #c9a14a; border: 2px solid #14201a; box-sizing: border-box;"></span></button>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
+          <span style="display: flex; flex-direction: column;"><span style="font-size: 15px; font-weight: 700;">Tim terbuka untuk ajakan</span><span style="font-size: 12px; color: #3b4a41;">Muncul di Cari Lawan</span></span>
+          <button role="switch" aria-checked="false" aria-label="Tim terbuka untuk ajakan" style="flex: 0 0 56px; width: 56px; height: 32px; padding: 0; border-radius: 999px; border: 2px solid #123b2c; background: #e4ddcc; position: relative;"><span style="position: absolute; top: 2px; left: 2px; width: 24px; height: 24px; border-radius: 50%; background: #fbf8f1; border: 2px solid #14201a; box-sizing: border-box;"></span></button>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 14px; font-weight: 700;">Logo tim</span>
+        <label style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 20px 16px; border: 2px dashed #123b2c; border-radius: 16px; background: #fbf8f1; text-align: center;">
+          <svg width="56" height="65" viewBox="0 0 64 74" aria-hidden="true"><path transform="translate(0 3)" d="M32 6 L56 13 V34 C56 50 45 60 32 66 C19 60 8 50 8 34 V13 Z" fill="#14201a" stroke="#14201a" stroke-width="6" stroke-linejoin="round"></path><path d="M32 6 L56 13 V34 C56 50 45 60 32 66 C19 60 8 50 8 34 V13 Z" fill="#f6e7bf" stroke="#14201a" stroke-width="6" stroke-linejoin="round"></path><path d="M32 24 V46 M21 35 H43" stroke="#123b2c" stroke-width="4" stroke-linecap="round"></path></svg>
+          <span style="font-size: 14px; font-weight: 800;">Unggah logo</span>
+          <span style="font-size: 12px; line-height: 1.4; color: #3b4a41;">PNG/JPG, persegi, maks 2 MB. Belum punya? Kami buatkan otomatis.</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 20px;">
+    <h2 style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #6b5320;">04 · Kode verifikasi (login lewat email)</h2>
+    <div style="display: flex; gap: 56px; align-items: flex-start; flex-wrap: wrap;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Mengisi</span>
+        <div role="group" aria-label="Kode 6 digit" style="display: flex; gap: 8px;">
+          <input aria-label="Digit 1" value="4" style="width: 48px; height: 60px; box-sizing: border-box; text-align: center; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 26px; font-weight: 800; color: #123b2c; outline: none;">
+          <input aria-label="Digit 2" value="8" style="width: 48px; height: 60px; box-sizing: border-box; text-align: center; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 26px; font-weight: 800; color: #123b2c; outline: none;">
+          <input aria-label="Digit 3" value="2" style="width: 48px; height: 60px; box-sizing: border-box; text-align: center; border: 2px solid #123b2c; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 26px; font-weight: 800; color: #123b2c; outline: none;">
+          <input aria-label="Digit 4" value="" style="width: 48px; height: 60px; box-sizing: border-box; text-align: center; border: 2px solid #123b2c; border-radius: 12px; background: #ffffff; box-shadow: 0 0 0 4px rgba(201,161,74,.6); font-family: inherit; font-size: 26px; font-weight: 800; color: #123b2c; outline: none;">
+          <input aria-label="Digit 5" value="" style="width: 48px; height: 60px; box-sizing: border-box; text-align: center; border: 2px solid #cfc6b1; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 26px; font-weight: 800; outline: none;">
+          <input aria-label="Digit 6" value="" style="width: 48px; height: 60px; box-sizing: border-box; text-align: center; border: 2px solid #cfc6b1; border-radius: 12px; background: #fbf8f1; font-family: inherit; font-size: 26px; font-weight: 800; outline: none;">
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 12px; font-weight: 700; color: #6b5320;">Kode salah</span>
+        <div style="display: flex; gap: 8px;">
+          <span style="width: 48px; height: 60px; display: flex; align-items: center; justify-content: center; border: 2px solid #a8382a; border-radius: 12px; background: #fdf3f1; font-size: 26px; font-weight: 800; color: #a8382a; box-sizing: border-box;">4</span>
+          <span style="width: 48px; height: 60px; display: flex; align-items: center; justify-content: center; border: 2px solid #a8382a; border-radius: 12px; background: #fdf3f1; font-size: 26px; font-weight: 800; color: #a8382a; box-sizing: border-box;">8</span>
+          <span style="width: 48px; height: 60px; display: flex; align-items: center; justify-content: center; border: 2px solid #a8382a; border-radius: 12px; background: #fdf3f1; font-size: 26px; font-weight: 800; color: #a8382a; box-sizing: border-box;">2</span>
+          <span style="width: 48px; height: 60px; display: flex; align-items: center; justify-content: center; border: 2px solid #a8382a; border-radius: 12px; background: #fdf3f1; font-size: 26px; font-weight: 800; color: #a8382a; box-sizing: border-box;">9</span>
+          <span style="width: 48px; height: 60px; display: flex; align-items: center; justify-content: center; border: 2px solid #a8382a; border-radius: 12px; background: #fdf3f1; font-size: 26px; font-weight: 800; color: #a8382a; box-sizing: border-box;">1</span>
+          <span style="width: 48px; height: 60px; display: flex; align-items: center; justify-content: center; border: 2px solid #a8382a; border-radius: 12px; background: #fdf3f1; font-size: 26px; font-weight: 800; color: #a8382a; box-sizing: border-box;">0</span>
+        </div>
+        <span style="display: flex; gap: 6px; align-items: center; font-size: 13px; font-weight: 700; color: #a8382a;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5.5M12 16.5h.01"></path></svg>Kodenya belum pas. Sisa 2 percobaan.</span>
+      </div>
+      <ul style="margin: 0; padding-left: 18px; flex: 1 1 280px; display: flex; flex-direction: column; gap: 8px; font-size: 13px; line-height: 1.5; color: #3b4a41;">
+        <li>Tempel (paste) 6 digit sekaligus harus langsung terisi semua.</li>
+        <li>Pakai <code>autocomplete="one-time-code"</code> supaya HP menyarankan kode dari email/SMS.</li>
+        <li>Digit ke-6 terisi → langsung verifikasi, tanpa tekan tombol.</li>
+      </ul>
+    </div>
+  </section>
+
+  <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b5320; font-weight: 600;">Nama lapangan &amp; harga sewa di papan ini fiktif, hanya contoh isi.</p>
+</div>
+</body>
+</html>
